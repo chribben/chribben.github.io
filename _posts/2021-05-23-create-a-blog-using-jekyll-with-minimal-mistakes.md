@@ -18,7 +18,7 @@ Here are the steps for how to create a blog site using Jekyll with a nice theme 
 
 * Follow the [Jekyll tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/) in order to get a basic understanding of it.
 * Install Jekyll on Ubuntu as described [here](https://jekyllrb.com/docs/installation/ubuntu/)
-* Create a public repository on GitHub named <your-github-username>.github.io
+* Create a public repository on GitHub named \<your-github-username\>.github.io
 * Clone the newly created repository to your local machine.
 * To start with a nice template, copy the contents of [Minimal Mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter) into your cloned repository.
 * Now change the contents and the [configuration](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) of the site to your liking.
@@ -26,7 +26,15 @@ Here are the steps for how to create a blog site using Jekyll with a nice theme 
 
 ## Using a custom domain name
 
-When you push your code to GitHub it will automatically build and publish your site to https://<your-github-username>.github.io. 
+When you push your code to GitHub it will automatically build and publish your site to https://\<your-github-username\>.github.io. 
 If you want use a custom domain like mysuperduperblog.com, follow these steps:
 * Register your domain mysuperduperblog.com at a domain registrar.
-* Go to your repo <your-github-username>.github.io and then to Settings -> Pages -> Custom domain and type your custom domain. Then click Save. 
+* Go to your repo \<your-github-username\>.github.io and then to Settings -> Pages -> Custom domain and type your custom domain. Then click Save. 
+* Create an A record with your DNS service that points your domain (e.g. mysuperduperblog.com) to the Github Pages' IP addresses:   
+185.199.108.153  
+185.199.109.153  
+185.199.110.153  
+185.199.111.153  
+* To have a subdomain such as www.mysuperduperblog.com configure a CNAME record at your DNS service. It should point the subdomain to \<your-github-username\>.github.io.
+
+If you've followed these steps you should now be able to have your blog at your chosen domain.
