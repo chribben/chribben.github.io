@@ -37,4 +37,4 @@ If you want use a custom domain like mysuperduperblog.com, follow these steps:
 185.199.111.153  
 * To have a subdomain such as www.mysuperduperblog.com configure a CNAME record at your DNS service. It should point the subdomain to \<your-github-username\>.github.io.
 
-If you've followed these steps you should now be able to have your blog at your chosen domain.
+If you've followed these steps you should now have your blog at your chosen domain.
