@@ -1,5 +1,7 @@
 ---
 title:  "Connecting Superset and Amazon Athena"
+permalink: connecting-superset-and-athena
+description: How to connect Superset and Amazon Athena
 date:   2021-05-17 13:19:13 +0200
 categories: 
   - blog
