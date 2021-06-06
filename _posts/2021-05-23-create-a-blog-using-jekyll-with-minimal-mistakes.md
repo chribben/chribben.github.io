@@ -1,6 +1,8 @@
 ---
 title: "Create a blog using Jekyll and Minimal Mistakes, hosted on Github Pages"
 date: 2021-05-21T15:34:30+01:00
+permalink: create-a-blog-using-jekyll-with-minimal-mistakes
+description: How to create a blog using Jekyll and Minimal Mistakes
 categories:
   - blog
 tags:

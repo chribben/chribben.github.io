@@ -54,7 +54,9 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 github: [metadata]
+google_analytics: "G-TB0X1J222M"
 author:
   name   : "Christian Jacobsen"
   avatar : "/assets/images/bio-photo.jpg"
