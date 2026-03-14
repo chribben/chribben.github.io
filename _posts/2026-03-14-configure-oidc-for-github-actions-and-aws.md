@@ -31,8 +31,9 @@ Go to **IAM → Roles → Create role**:
 
 1. Select **Web identity** as the trusted entity type.
 2. Pick the identity provider you just created and audience `sts.amazonaws.com`.
-3. Attach whatever permissions policies your deployment needs (e.g. `AdministratorAccess`, or something scoped down).
-4. Name the role, e.g. `GitHubActionsDeployRole`, and create it.
+3. Under **GitHub organization**, enter your GitHub org or username (e.g. `myorg`). You can optionally filter by repository and branch as well.
+4. Attach whatever permissions policies your deployment needs (e.g. `AdministratorAccess`, or something scoped down).
+5. Name the role, e.g. `GitHubActionsDeployRole`, and create it.
 
 Now edit the role's trust policy to restrict it to your repo. Replace the `Condition` block:
 
