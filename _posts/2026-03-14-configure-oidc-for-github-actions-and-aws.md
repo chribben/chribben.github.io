@@ -32,8 +32,29 @@ Go to **IAM → Roles → Create role**:
 1. Select **Web identity** as the trusted entity type.
 2. Pick the identity provider you just created and audience `sts.amazonaws.com`.
 3. Under **GitHub organization**, enter your GitHub org or username (e.g. `myorg`). You can optionally filter by repository and branch as well.
-4. Attach whatever permissions policies your deployment needs (e.g. `AdministratorAccess`, or something scoped down).
+4. On the **Add permissions** page, skip without selecting any policy — click **Next**.
 5. Name the role, e.g. `GitHubActionsDeployRole`, and create it.
+
+### Add permissions for CDK
+
+If you're deploying with CDK, the role only needs permission to assume the roles that `cdk bootstrap` created. Go to the role you just created, choose **Add permissions → Create inline policy**, and use:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": "arn:aws:iam::<ACCOUNT_ID>:role/cdk-*"
+    }
+  ]
+}
+```
+
+The CDK bootstrap roles (`cdk-deploy-role-*`, `cdk-file-publishing-role-*`, etc.) already have the necessary CloudFormation, S3, Lambda, and IAM permissions scoped to CDK operations. This is much safer than granting `AdministratorAccess`.
+
+### Edit the trust policy
 
 Now edit the role's trust policy to restrict it to your repo. Replace the `Condition` block:
 
