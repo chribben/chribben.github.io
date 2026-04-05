@@ -1,6 +1,6 @@
 ---
 title: "Build a full-stack app with Lovable and AWS"
-date: 2026-04-05T10:30:00+01:00
+date: 2026-04-05T09:00:00+01:00
 permalink: full-stack-application-lovable-aws
 description: Use Lovable for the frontend, then replace Supabase with AWS primitives and deploy with CDK and GitHub Actions.
 categories:
